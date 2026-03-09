@@ -1,0 +1,110 @@
+{
+  "schema_version": "egp-certificate-0.1",
+  "certificate_id": "egp-0.1-novadust-v0.1.0-0B62943F",
+  "issued_at": "2026-03-09T04:56:18Z",
+
+  "profile": {
+    "profile_id": "NovaFuse-EGP",
+    "profile_version": "0.1",
+    "scope_note": "Assesses runtime execution-governance behavior of the evaluated component between proposal and effect. Out of scope: model correctness, organizational compliance, ethical adequacy of policies."
+  },
+
+  "component": {
+    "name": "novadust",
+    "version": "0.1.0",
+    "build": {
+      "commit": "",
+      "build_id": ""
+    }
+  },
+
+  "harness": {
+    "name": "NovaFuse-EGP-VS",
+    "version": "0.1.0",
+    "entrypoint": "verifier/verify.ps1"
+  },
+
+  "results": {
+    "overall": "PASS",
+    "claims": {
+      "EG01": {
+        "status": "PASS",
+        "details": "Per-input determinism: each input repeated 10x with 1 unique hash per input.",
+        "vectors": ["EG01.input_0", "EG01.input_1", "EG01.input_2"]
+      },
+      "EG02": {
+        "status": "PASS",
+        "details": "Explicit refusal semantics validated across invalid proposal classes.",
+        "vectors": ["EG02.missing_required_fields", "EG02.disallowed_actions", "EG02.malformed_syntax", "EG02.overflow_conditions"]
+      },
+      "EG03": {
+        "status": "PASS",
+        "details": "Authority separation boundaries verified via static + runtime inspection.",
+        "vectors": ["EG03.static_analysis", "EG03.runtime_inspection", "EG03.boundary_violations"]
+      },
+      "EG04": {
+        "status": "PASS",
+        "details": "Identity-bound evaluation validated across identities; missing identity refused.",
+        "vectors": ["EG04.identity.admin", "EG04.identity.user", "EG04.identity.service", "EG04.identity.anonymous", "EG04.missing_identity"]
+      },
+      "EG05": {
+        "status": "PASS",
+        "details": "Non-repudiable evidence generated and validated for admit/refuse outcomes.",
+        "vectors": ["EG05.admit_evidence", "EG05.refuse_evidence"]
+      },
+      "EG06": {
+        "status": "PASS",
+        "details": "Fail-closed behavior validated across missing context, corrupt identity, internal error, and resource exhaustion.",
+        "vectors": ["EG06.missing_context", "EG06.corrupt_identity", "EG06.internal_error", "EG06.resource_exhaustion"]
+      }
+    },
+
+    "tests_run": [
+      "EG01_Determinism",
+      "EG02_Refusal",
+      "EG03_AuthoritySeparation",
+      "EG04_IdentityBinding",
+      "EG05_Evidence",
+      "EG06_FailClosed"
+    ],
+
+    "metrics": {
+      "total_duration_ms": 779,
+      "suite_count": 6
+    }
+  },
+
+  "integrity": {
+    "verifier_sha256": "0B62943F0A8F53B1E203F2B37EC7FB16826B3E3CB55B3BE07D43564F29112D8F",
+    "profile_sha256": "71EFCBFEC877A3E69F24DC244062C23FD9FDA6A5BB7A6BCD87867BEB63F38B01",
+    "tests_sha256": {
+      "suite_hashes": [
+        { "suite": "EG01_determinism", "sha256": "C900E5C7FA1951DA13AAE6204AE43CD480B8F7EC0E1B7F6781DEB0A0B9997755" },
+        { "suite": "EG02_refusal", "sha256": "4AE554C7485484245CB5B6F27984D5AF77FDD25EB96AB1F03A984A6B34931C8D" },
+        { "suite": "EG03_authority_separation", "sha256": "D1B716AF69FB38DD1EAA17EA732437774A3EC681959E71B5BD168337F5140DD6" },
+        { "suite": "EG04_identity_binding", "sha256": "20FC6E3B1FD2309ECEB3CAB9C739A334F8B89F5064B1AAB3CD73127A4B04C7D5" },
+        { "suite": "EG05_evidence", "sha256": "C152D5A32A881401778814F60701548BB20204ECA6CE3D1D6DECB2245FD64ABA" },
+        { "suite": "EG06_fail_closed", "sha256": "F85E8B039BB02BEC0775D15ED29A1A9096306398D80F1DBDF45C0CDB64288A58" }
+      ]
+    },
+
+    "sbom_spdx_sha256": ""
+  },
+
+  "artifacts": {
+    "certificate_path": "artifacts/certs/certificate-egp-0.1-novadust-v0.1.0.json",
+    "logs": [
+      "artifacts/logs/egp-run.log",
+      "artifacts/logs/egp-evidence.log"
+    ],
+    "sbom_spdx_path": ""
+  },
+
+  "signature": {
+    "alg": "none",
+    "key_id": "none",
+    "value": ""
+  },
+
+  "notes": "Presentation warnings (e.g., PSStyle OutputRendering support) are non-normative and MUST NOT affect PASS/FAIL outcomes. Certificate ID suffix is the first 8 hex chars of verifier_sha256."
+}

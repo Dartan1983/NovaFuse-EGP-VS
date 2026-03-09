@@ -1,0 +1,99 @@
+﻿{
+    "results":  {
+                    "tests_run":  [
+                                      "EG01_Determinism",
+                                      "EG02_Refusal",
+                                      "EG03_AuthoritySeparation",
+                                      "EG04_IdentityBinding",
+                                      "EG05_Evidence",
+                                      "EG06_FailClosed"
+                                  ],
+                    "overall":  "PASS",
+                    "claims":  {
+                                   "EG01":  {
+                                                "status":  "PASS",
+                                                "details":  "Per-input determinism verified"
+                                            },
+                                   "EG05":  {
+                                                "status":  "PASS",
+                                                "details":  "Evidence generation verified"
+                                            },
+                                   "EG06":  {
+                                                "status":  "PASS",
+                                                "details":  "Fail-closed semantics verified"
+                                            },
+                                   "EG02":  {
+                                                "status":  "PASS",
+                                                "details":  "Explicit refusal semantics verified"
+                                            },
+                                   "EG03":  {
+                                                "status":  "PASS",
+                                                "details":  "Authority separation verified"
+                                            },
+                                   "EG04":  {
+                                                "status":  "PASS",
+                                                "details":  "Identity binding verified"
+                                            }
+                               },
+                    "metrics":  {
+                                    "suite_count":  6,
+                                    "total_duration_ms":  779
+                                }
+                },
+    "schema_version":  "egp-certificate-0.1",
+    "issued_at":  "2026-03-09T04:56:18Z",
+    "integrity":  {
+                      "tests_sha256":  {
+                                           "suite_hashes":  [
+                                                                {
+                                                                    "sha256":  "C900E5C7FA1951DA13AAE6204AE43CD480B8F7EC0E1B7F6781DEB0A0B9997755",
+                                                                    "suite":  "EG01_determinism"
+                                                                },
+                                                                {
+                                                                    "sha256":  "4AE554C7485484245CB5B6F27984D5AF77FDD25EB96AB1F03A984A6B34931C8D",
+                                                                    "suite":  "EG02_refusal"
+                                                                },
+                                                                {
+                                                                    "sha256":  "D1B716AF69FB38DD1EAA17EA732437774A3EC681959E71B5BD168337F5140DD6",
+                                                                    "suite":  "EG03_authority_separation"
+                                                                },
+                                                                {
+                                                                    "sha256":  "20FC6E3B1FD2309ECEB3CAB9C739A334F8B89F5064B1AAB3CD73127A4B04C7D5",
+                                                                    "suite":  "EG04_identity_binding"
+                                                                },
+                                                                {
+                                                                    "sha256":  "C152D5A32A881401778814F60701548BB20204ECA6CE3D1D6DECB2245FD64ABA",
+                                                                    "suite":  "EG05_evidence"
+                                                                },
+                                                                {
+                                                                    "sha256":  "F85E8B039BB02BEC0775D15ED29A1A9096306398D80F1DBDF45C0CDB64288A58",
+                                                                    "suite":  "EG06_fail_closed"
+                                                                }
+                                                            ]
+                                       },
+                      "verifier_sha256":  "0B62943F0A8F53B1E203F2B37EC7FB16826B3E3CB55B3BE07D43564F29112D8F",
+                      "profile_sha256":  "71EFCBFEC877A3E69F24DC244062C23FD9FDA6A5BB7A6BCD87867BEB63F38B01"
+                  },
+    "certificate_id":  "egp-0.1-novadust-v0.1.0-0B62943F",
+    "profile":  {
+                    "scope_note":  "Conformance to NovaFuse-EGP-0.1 claims EG-01 through EG-06",
+                    "profile_version":  "0.1",
+                    "profile_id":  "NovaFuse-EGP"
+                },
+    "signature":  null,
+    "component":  {
+                      "version":  "0.1.0",
+                      "name":  "novadust"
+                  },
+    "artifacts":  {
+                      "certificate_path":  "artifacts\\certs\\certificate-egp-0.1-novadust-v0.1.0.json",
+                      "logs":  [
+                                   "artifacts\\logs"
+                               ]
+                  },
+    "harness":  {
+                    "entrypoint":  "verifier/verify.ps1",
+                    "name":  "NovaFuse-EGP-VS",
+                    "version":  "0.1.0"
+                }
+}

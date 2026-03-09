@@ -1,0 +1,156 @@
+{
+  "bundle_metadata": {
+    "format_version": "1.0",
+    "bundle_name": "NovaFuse-EGP-VS",
+    "bundle_version": "0.1.0",
+    "profile_version": "0.1.0",
+    "specification": "NovaFuse-EGP-0.1",
+    
+    "build_information": {
+      "build_host": "NOVA-BUILD-01",
+      "build_os": "Windows Server 2022",
+      "build_architecture": "x64",
+      "build_timestamp": "2026-03-09T14:30:00Z",
+      "build_timezone": "UTC",
+      "build_environment": "Production"
+    },
+    
+    "tool_versions": {
+      "powershell": {
+        "minimum_version": "7.0.0",
+        "recommended_version": "7.2.0",
+        "build_version": "7.2.0"
+      },
+      "gpg": {
+        "minimum_version": "2.2.0",
+        "recommended_version": "2.4.0",
+        "build_version": "2.4.0"
+      },
+      "bash": {
+        "minimum_version": "4.0.0",
+        "recommended_version": "5.0.0",
+        "build_version": "5.1.16"
+      },
+      "git": {
+        "minimum_version": "2.25.0",
+        "recommended_version": "2.40.0",
+        "build_version": "2.40.0"
+      }
+    },
+    
+    "integrity": {
+      "bundle_sha256": "0000000000000000000000000000000000000000000000000000000000000000000000",
+      "bundle_size_bytes": 1048576,
+      "file_count": 15,
+      "directory_count": 6,
+      "compression_method": "ZIP"
+    },
+    
+    "security": {
+      "signing_key_id": "ABCD1234EF567890",
+      "signing_key_email": "certification@novafuse.ai",
+      "signature_algorithm": "RSA-4096",
+      "hash_algorithm": "SHA-256",
+      "signature_format": "PGP"
+    },
+    
+    "contents": {
+      "core_components": [
+        "verifier/verify.ps1",
+        "verifier/config/profile.json",
+        "tests/EG01_determinism/",
+        "tests/EG02_refusal/",
+        "tests/EG03_authority_separation/",
+        "tests/EG04_identity_binding/",
+        "tests/EG05_evidence/",
+        "tests/EG06_fail_closed/",
+        "cert-schema/egp-certificate.schema.json"
+      ],
+      "documentation": [
+        "README.md",
+        "ASSESSOR-RUN.md",
+        "CHANGE_CONTROL.md",
+        "Certification-Summary.md",
+        "KEY-REVOCATION.md"
+      ],
+      "security_assets": [
+        "RELEASE-HASHES.txt",
+        "RELEASE-HASHES.txt.sig",
+        "NovaFuse-PublicKey.asc",
+        "BUNDLE-METADATA.json"
+      ],
+      "distribution_tools": [
+        "Generate-USB-Bundle.ps1",
+        "Generate-GPG-Keys.ps1",
+        "Sign-Manifest.ps1",
+        "make-usb-bundle.sh"
+      ],
+      "compliance_forms": [
+        "USB-Distribution-Checklist.md",
+        "USB-Chain-of-Custody.md"
+      ]
+    },
+    
+    "verification": {
+      "manifest_file": "RELEASE-HASHES.txt",
+      "signature_file": "RELEASE-HASHES.txt.sig",
+      "public_key_file": "NovaFuse-PublicKey.asc",
+      "revocation_check": "https://novafuse.ai/security/revocations/revocation-manifest.json",
+      "verification_procedure": "ASSESSOR-RUN.md"
+    },
+    
+    "compliance": {
+      "standards": [
+        "ISO-27001",
+        "NIST-800-53",
+        "SOC-2-Type-II",
+        "GDPR",
+        "Export-Control"
+      ],
+      "certification_level": "Production",
+      "audit_readiness": "Full",
+      "regulatory_jurisdictions": [
+        "US",
+        "EU",
+        "UK",
+        "CA",
+        "AU"
+      ]
+    },
+    
+    "lifecycle": {
+      "release_date": "2026-03-09",
+      "support_end_date": "2027-03-09",
+      "security_support_end_date": "2028-03-09",
+      "next_review_date": "2026-06-09",
+      "maintenance_window": "Monthly"
+    },
+    
+    "contacts": {
+      "security": {
+        "email": "security@novafuse.ai",
+        "pgp_key": "https://novafuse.ai/security/pgp-key.asc",
+        "phone": "+1-555-NOVA-SEC"
+      },
+      "support": {
+        "email": "support@novafuse.ai",
+        "documentation": "https://novafuse.ai/docs/egp-vs/",
+        "knowledge_base": "https://novafuse.ai/kb/"
+      },
+      "certification": {
+        "email": "certification@novafuse.ai",
+        "authority": "NovaFuse Certification Authority",
+        "website": "https://novafuse.ai/certification/"
+      }
+    },
+    
+    "metadata": {
+      "generator": "NovaFuse-EGP-VS Build System",
+      "generator_version": "1.0.0",
+      "schema_version": "1.0",
+      "created": "2026-03-09T14:30:00Z",
+      "modified": "2026-03-09T14:30:00Z",
+      "checksum": "META-0000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  }
+}

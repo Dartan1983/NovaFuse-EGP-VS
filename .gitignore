@@ -1,0 +1,54 @@
+# Build artifacts
+dist/
+*.log
+*.tmp
+*.cache
+
+# Sensitive files
+*.key
+*.p12
+secrets/
+*.gpgkey
+private-key*
+
+# OS specific
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node modules (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.PythonEnv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Temporary files
+*.temp
+*.bak
+*.backup
+*.old
+
+# Generated artifacts that should be committed
+!verifier/artifacts/certs/*.json
+!RELEASE-HASHES.txt
+!RELEASE-HASHES.txt.sig
+!NovaFuse-PublicKey.asc
+!BUNDLE-METADATA.json
+!certificate-*.json
