@@ -1,10 +1,10 @@
 # NovaFuse-EGP-VS v0.1.2
 
-![Build Status](https://github.com/NovaFuse-Technologies/NovaFuse-EGP-VS/workflows/validation/badge.svg)
-![License](https://github.com/NovaFuse-Technologies/NovaFuse-EGP-VS/blob/main/LICENSE)
-![Validation](https://github.com/NovaFuse-Technologies/NovaFuse-EGP-VS/actions)
-![Platform](https://github.com/NovaFuse-Technologies/NovaFuse-EGP-VS/blob/main/README.md#platform-support)
-![Version](https://github.com/NovaFuse-Technologies/NovaFuse-EGP-VS/releases)
+![Build Status](https://github.com/Dartan1983/NovaFuse-EGP-VS/workflows/validation/badge.svg)
+![License](https://github.com/Dartan1983/NovaFuse-EGP-VS/blob/main/LICENSE)
+![Validation](https://github.com/Dartan1983/NovaFuse-EGP-VS/actions)
+![Platform](https://github.com/Dartan1983/NovaFuse-EGP-VS/blob/main/README.md#platform-support)
+![Version](https://github.com/Dartan1983/NovaFuse-EGP-VS/releases)
 
 **NovaFuse Evidence Governance Protocol (EGP) Verification Harness** — Deterministic, CI-runnable evaluation harness for assessing conformance to NovaFuse-EGP-0.1, designed for auditors, regulators, and high-assurance environments.
 
