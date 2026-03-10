@@ -50,7 +50,7 @@ Frameworks supported for evidence mapping include:
 - 📦 **Air-Gapped Operation**: Full offline verification capability
 - 📦 **Third-Party Validation**: External reproducibility protocols
 
-## 🏆 What's New in v0.1.0
+## 🏆 What's New in v0.1.2 
 
 ### **Initial Release Capabilities**
 
@@ -172,7 +172,7 @@ Frameworks supported for evidence mapping include:
 
 ## 🚦 Breaking Changes
 
-### **None in v0.1.0**
+### **None in v0.1.2 **
 This is the initial release with no breaking changes from previous versions (none existed).
 
 ### **Future Compatibility**
@@ -184,7 +184,7 @@ Future releases will maintain backward compatibility for:
 
 ## 🔧 Known Issues
 
-### **Resolved in v0.1.0**
+### **Resolved in v0.1.2 **
 - ✅ PowerShell encoding issues resolved
 - ✅ Cross-platform compatibility verified
 - ✅ Bundle generation stability confirmed
@@ -292,7 +292,7 @@ docker run -v $(pwd)/bundle:/data novafuse-egp-vs:0.1.0
 - **Documentation**: Complete documentation in repository
 - **Issues**: GitHub Issues with templates for bugs, features, and regulatory questions
 - **Discussions**: GitHub Discussions for community support
-- **Security**: security@novafuse.ai for security matters
+- **Security**: novafuse.technologies@gmail.com for security matters
 
 ### **Community Resources**
 - **Contributing**: See [CONTRIBUTING.md](CONTRIBUTING.md) for development guidelines
@@ -329,7 +329,7 @@ docker run -v $(pwd)/bundle:/data novafuse-egp-vs:0.1.0
 ## 📄 Legal & Licensing
 
 ### **License**
-NovaFuse‑EGP‑VS is released under the NovaFuse Certification Infrastructure License (NCIL) v0.1. Source‑available for audit and reproducibility. Certification authority and mark usage reserved. See [LICENSE](LICENSE) for full terms.
+NovaFuse‑EGP‑VS is released under the NovaFuse Certification Infrastructure License (NCIL) v0.1.2  Source‑available for audit and reproducibility. Certification authority and mark usage reserved. See [LICENSE](LICENSE) for full terms.
 
 ### **Disclaimer**
 This software is provided "as-is" without warranty. Users should validate compliance requirements with qualified legal counsel.
@@ -367,23 +367,22 @@ Support for third-party regulatory assessment activities.
 ## 📞 Contact Information
 
 ### **General Inquiries**
-- **Email**: info@novafuse.ai
-- **Website**: https://novafuse.ai
-- **Documentation**: https://docs.novafuse.ai
+- **Email**: novafuse.technologies@gmail.com
+
 
 ### **Security Matters**
-- **Email**: security@novafuse.ai
+- **Email**: novafuse.technologies@gmail.com
 - **PGP Key**: Available on request
-- **Incident Response**: 24/7 monitoring
 
 ### **Business Inquiries**
-- **Email**: business@novafuse.ai
-- **Sales**: sales@novafuse.ai
-- **Partnerships**: partners@novafuse.ai
+- **Email**: novafuse.technologies@gmail.com
+- **Sales**
+- **Partnerships**
+  
 
 ---
 
-**NovaFuse-EGP-VS v0.1.0 delivers a deterministic, auditable verification system for assessing conformance to the NovaFuse Evidence Governance Protocol (EGP). This release emphasizes reproducibility, cryptographic integrity, and clear scope boundaries suitable for independent assessment and regulatory review.
+**NovaFuse-EGP-VS v0.1.2 delivers a deterministic, auditable verification system for assessing conformance to the NovaFuse Evidence Governance Protocol (EGP). This release emphasizes reproducibility, cryptographic integrity, and clear scope boundaries suitable for independent assessment and regulatory review.
 
 *From deterministic verification to cryptographic evidence. From assessment methodology to audit-ready documentation.*
 
