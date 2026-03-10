@@ -60,7 +60,8 @@ try {
 # Check Bundle Path
 $Results.Environment.BundlePath = $BundlePath
 $Results.Environment.BundleExists = Test-Path $BundlePath
-Write-Host "Bundle Path: $BundlePath - $($($Results.Environment.BundleExists ? '✅' : '❌'))" -ForegroundColor $(if ($Results.Environment.BundleExists) { 'Green' } else { 'Red' })
+$status = if ($Results.Environment.BundleExists) { '✅' } else { '❌' }
+Write-Host "Bundle Path: $BundlePath - $status" -ForegroundColor $(if ($Results.Environment.BundleExists) { 'Green' } else { 'Red' })
 
 if (-not $Results.Environment.BundleExists) {
     Write-Host "❌ Bundle not found at $BundlePath" -ForegroundColor Red
@@ -75,17 +76,20 @@ Write-Host "----------------------------------" -ForegroundColor Yellow
 # Check SHA-256 Manifest
 $manifestPath = "$BundlePath\RELEASE-HASHES.txt"
 $Results.BundleIntegrity.ManifestExists = Test-Path $manifestPath
-Write-Host "SHA-256 Manifest: $($($Results.BundleIntegrity.ManifestExists ? '✅' : '❌'))" -ForegroundColor $(if ($Results.BundleIntegrity.ManifestExists) { 'Green' } else { 'Red' })
+$status = if ($Results.BundleIntegrity.ManifestExists) { '✅' } else { '❌' }
+Write-Host "SHA-256 Manifest: $status" -ForegroundColor $(if ($Results.BundleIntegrity.ManifestExists) { 'Green' } else { 'Red' })
 
 # Check Public Key
 $publicKeyPath = "$BundlePath\NovaFuse-PublicKey.asc"
 $Results.BundleIntegrity.PublicKeyExists = Test-Path $publicKeyPath
-Write-Host "Public Key: $($($Results.BundleIntegrity.PublicKeyExists ? '✅' : '❌'))" -ForegroundColor $(if ($Results.BundleIntegrity.PublicKeyExists) { 'Green' } else { 'Red' })
+$status = if ($Results.BundleIntegrity.PublicKeyExists) { '✅' } else { '❌' }
+Write-Host "Public Key: $status" -ForegroundColor $(if ($Results.BundleIntegrity.PublicKeyExists) { 'Green' } else { 'Red' })
 
 # Check Metadata
 $metadataPath = "$BundlePath\BUNDLE-METADATA.json"
 $Results.BundleIntegrity.MetadataExists = Test-Path $metadataPath
-Write-Host "Bundle Metadata: $($($Results.BundleIntegrity.MetadataExists ? '✅' : '❌'))" -ForegroundColor $(if ($Results.BundleIntegrity.MetadataExists) { 'Green' } else { 'Red' })
+$status = if ($Results.BundleIntegrity.MetadataExists) { '✅' } else { '❌' }
+Write-Host "Bundle Metadata: $status" -ForegroundColor $(if ($Results.BundleIntegrity.MetadataExists) { 'Green' } else { 'Red' })
 
 # Verify File Hashes
 if ($Results.BundleIntegrity.ManifestExists) {
@@ -120,7 +124,8 @@ if ($Results.BundleIntegrity.ManifestExists) {
     $Results.BundleIntegrity.TotalFiles = $totalFiles
     $Results.BundleIntegrity.HashErrors = $hashErrors
     
-    Write-Host "Hash Verification: $($totalFiles - $hashErrors) files - $($($Results.BundleIntegrity.HashVerificationPassed ? '✅' : '❌'))" -ForegroundColor $(if ($Results.BundleIntegrity.HashVerificationPassed) { 'Green' } else { 'Red' })
+    $status = if ($Results.BundleIntegrity.HashVerificationPassed) { '✅' } else { '❌' }
+Write-Host "Hash Verification: $($totalFiles - $hashErrors) files - $status" -ForegroundColor $(if ($Results.BundleIntegrity.HashVerificationPassed) { 'Green' } else { 'Red' })
 }
 
 Write-Host ""
@@ -130,7 +135,8 @@ Write-Host "--------------------------------" -ForegroundColor Yellow
 # Run Verification Harness
 $verifierPath = "$BundlePath\verifier"
 $Results.VerificationHarness.VerifierExists = Test-Path "$verifierPath\verify.ps1"
-Write-Host "Verifier Script: $($($Results.VerificationHarness.VerifierExists ? '✅' : '❌'))" -ForegroundColor $(if ($Results.VerificationHarness.VerifierExists) { 'Green' } else { 'Red' })
+$status = if ($Results.VerificationHarness.VerifierExists) { '✅' } else { '❌' }
+Write-Host "Verifier Script: $status" -ForegroundColor $(if ($Results.VerificationHarness.VerifierExists) { 'Green' } else { 'Red' })
 
 if ($Results.VerificationHarness.VerifierExists) {
     Write-Host "Running verification harness..." -ForegroundColor Gray
@@ -155,7 +161,8 @@ if ($Results.VerificationHarness.VerifierExists) {
             $Results.VerificationHarness.TestsFailed = [int]$matches[1]
         }
         
-        Write-Host "Harness Results: $($Results.VerificationHarness.TestsPassed)/$($Results.VerificationHarness.TestsRun) passed - $($($Results.VerificationHarness.Passed ? '✅' : '❌'))" -ForegroundColor $(if ($Results.VerificationHarness.Passed) { 'Green' } else { 'Red' })
+        $status = if ($Results.VerificationHarness.Passed) { '✅' } else { '❌' }
+Write-Host "Harness Results: $($Results.VerificationHarness.TestsPassed)/$($Results.VerificationHarness.TestsRun) passed - $status" -ForegroundColor $(if ($Results.VerificationHarness.Passed) { 'Green' } else { 'Red' })
         
         if ($Detailed) {
             Write-Host "Harness Output:" -ForegroundColor Gray
@@ -176,7 +183,8 @@ Write-Host "-----------------------------" -ForegroundColor Yellow
 # Check Generated Certificate
 $certPath = "$BundlePath\verifier\artifacts\certs\certificate-egp-0.1-novadust-v0.1.0.json"
 $Results.CertificateValidation.CertificateExists = Test-Path $certPath
-Write-Host "Certificate Generated: $($($Results.CertificateValidation.CertificateExists ? '✅' : '❌'))" -ForegroundColor $(if ($Results.CertificateValidation.CertificateExists) { 'Green' } else { 'Red' })
+$status = if ($Results.CertificateValidation.CertificateExists) { '✅' } else { '❌' }
+Write-Host "Certificate Generated: $status" -ForegroundColor $(if ($Results.CertificateValidation.CertificateExists) { 'Green' } else { 'Red' })
 
 if ($Results.CertificateValidation.CertificateExists) {
     try {
@@ -185,7 +193,8 @@ if ($Results.CertificateValidation.CertificateExists) {
         $Results.CertificateValidation.ValidCertificate = ($cert.results.overall -eq "PASS")
         $Results.CertificateValidation.CertificateId = $cert.metadata.certificate_id
         
-        Write-Host "Certificate Status: $($Results.CertificateValidation.OverallStatus) - $($($Results.CertificateValidation.ValidCertificate ? '✅' : '❌'))" -ForegroundColor $(if ($Results.CertificateValidation.ValidCertificate) { 'Green' } else { 'Red' })
+        $status = if ($Results.CertificateValidation.ValidCertificate) { '✅' } else { '❌' }
+Write-Host "Certificate Status: $($Results.CertificateValidation.OverallStatus) - $status" -ForegroundColor $(if ($Results.CertificateValidation.ValidCertificate) { 'Green' } else { 'Red' })
         Write-Host "Certificate ID: $($Results.CertificateValidation.CertificateId)" -ForegroundColor Gray
         
         # Check Individual Claims
@@ -210,7 +219,8 @@ Write-Host "----------------------" -ForegroundColor Yellow
 # Check Evidence Files
 $evidencePath = "$BundlePath\verifier\artifacts\logs"
 $Results.EvidenceIntegrity.EvidenceLogsExist = Test-Path $evidencePath
-Write-Host "Evidence Logs: $($($Results.EvidenceIntegrity.EvidenceLogsExist ? '✅' : '❌'))" -ForegroundColor $(if ($Results.EvidenceIntegrity.EvidenceLogsExist) { 'Green' } else { 'Red' })
+$status = if ($Results.EvidenceIntegrity.EvidenceLogsExist) { '✅' } else { '❌' }
+Write-Host "Evidence Logs: $status" -ForegroundColor $(if ($Results.EvidenceIntegrity.EvidenceLogsExist) { 'Green' } else { 'Red' })
 
 if ($Results.EvidenceIntegrity.EvidenceLogsExist) {
     $evidenceFiles = Get-ChildItem $evidencePath -Filter "*.json"
@@ -228,7 +238,8 @@ if ($Results.EvidenceIntegrity.EvidenceLogsExist) {
     $Results.EvidenceIntegrity.UniqueHashes = ($evidenceHashes | Sort-Object -Unique).Count
     $Results.EvidenceIntegrity.EvidenceIntegrityVerified = ($evidenceHashes.Count -eq $Results.EvidenceIntegrity.UniqueHashes)
     
-    Write-Host "Evidence Integrity: $($Results.EvidenceIntegrity.UniqueHashes)/$($evidenceFiles.Count) unique - $($($Results.EvidenceIntegrity.EvidenceIntegrityVerified ? '✅' : '❌'))" -ForegroundColor $(if ($Results.EvidenceIntegrity.EvidenceIntegrityVerified) { 'Green' } else { 'Red' })
+    $status = if ($Results.EvidenceIntegrity.EvidenceIntegrityVerified) { '✅' } else { '❌' }
+Write-Host "Evidence Integrity: $($Results.EvidenceIntegrity.UniqueHashes)/$($evidenceFiles.Count) unique - $status" -ForegroundColor $(if ($Results.EvidenceIntegrity.EvidenceIntegrityVerified) { 'Green' } else { 'Red' })
 }
 
 # Calculate Overall Status

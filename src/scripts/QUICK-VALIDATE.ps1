@@ -5,7 +5,7 @@ Write-Host "NovaFuse-EGP-VS Quick Validation" -ForegroundColor Cyan
 Write-Host "==============================" -ForegroundColor Cyan
 
 # Check Bundle
-$bundlePath = ".\dist\NovaFuse-EGP-VS-v0.1.0"
+$bundlePath = ".\test-bundle\NovaFuse-EGP-VS-v0.1.0"
 if (Test-Path $bundlePath) {
     Write-Host "✅ Bundle found: $bundlePath" -ForegroundColor Green
 } else {
