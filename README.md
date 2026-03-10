@@ -1,11 +1,5 @@
-# NovaFuse-EGP-VS v0.1.2
-
-![Build Status](https://github.com/Dartan1983/NovaFuse-EGP-VS/workflows/CI/badge.svg)
-![License](https://img.shields.io/badge/license-Proprietary-blue)
-![Validation](https://img.shields.io/badge/validation-6%2F6%20PASS-brightgreen)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
-![Version](https://img.shields.io/badge/version-v0.1.2-orange)
-
+## NovaFuse-EGP-VS v0.1.2
+---
 **NovaFuse Evidence Governance Protocol (EGP) Verification Harness** — Deterministic, CI-runnable evaluation harness for assessing conformance to NovaFuse-EGP-0.1, designed for auditors, regulators, and high-assurance environments.
 
 ## Overview
