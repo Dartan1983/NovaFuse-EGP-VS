@@ -24,14 +24,14 @@ jobs:
     - name: Run Verification Harness
       shell: powershell
       run: |
-        cd verifier
-        .\verify.ps1
+        cd src\scripts
+        .\VALIDATE-SYSTEM.ps1
         
     - name: Validate Certificate
       shell: powershell
       run: |
-        if (Test-Path "verifier\artifacts\certs\certificate-*.json") {
-          $cert = Get-Content "verifier\artifacts\certs\certificate-*.json" | ConvertFrom-Json
+        if (Test-Path "src\artifacts\certs\certificate-*.json") {
+          $cert = Get-Content "src\artifacts\certs\certificate-*.json" | ConvertFrom-Json
           Write-Host "Certificate Status: $($cert.results.overall)"
           Write-Host "Certificate ID: $($cert.metadata.certificate_id)"
           
@@ -49,9 +49,9 @@ jobs:
     - name: Test Bundle Generation
       shell: powershell
       run: |
-        .\Generate-USB-Bundle-Clean.ps1 -OutputPath .\test-bundle -SkipSigning
+        .\src\scripts\Generate-USB-Bundle-Clean.ps1 -OutputPath .\test-bundle -SkipSigning
         
-        if (Test-Path ".\test-bundle\NovaFuse-EGP-VS-v0.1.0") {
+        if (Test-Path ".\test-bundle\NovaFuse-EGP-VS-v0.1.2") {
           Write-Host "✅ Bundle generation successful"
         } else {
           Write-Host "❌ Bundle generation failed"
@@ -61,7 +61,7 @@ jobs:
     - name: Validate Bundle Integrity
       shell: powershell
       run: |
-        $manifestPath = ".\test-bundle\NovaFuse-EGP-VS-v0.1.0\RELEASE-HASHES.txt"
+        $manifestPath = ".\test-bundle\NovaFuse-EGP-VS-v0.1.2\RELEASE-HASHES.txt"
         if (Test-Path $manifestPath) {
           Write-Host "✅ Bundle manifest found"
           
@@ -80,7 +80,7 @@ jobs:
       with:
         name: windows-verification-artifacts
         path: |
-          verifier/artifacts/
+          src/artifacts/
           test-bundle/
         retention-days: 30
 
@@ -104,14 +104,14 @@ jobs:
     - name: Run Verification Harness
       shell: powershell
       run: |
-        cd verifier
-        .\verify.ps1
+        cd src\scripts
+        .\VALIDATE-SYSTEM.ps1
         
     - name: Validate Certificate
       shell: powershell
       run: |
-        if (Test-Path "verifier\artifacts\certs\certificate-*.json") {
-          $cert = Get-Content "verifier\artifacts\certs\certificate-*.json" | ConvertFrom-Json
+        if (Test-Path "src\artifacts\certs\certificate-*.json") {
+          $cert = Get-Content "src\artifacts\certs\certificate-*.json" | ConvertFrom-Json
           Write-Host "Certificate Status: $($cert.results.overall)"
           Write-Host "Certificate ID: $($cert.metadata.certificate_id)"
           
@@ -134,9 +134,9 @@ jobs:
     - name: Test Bundle Generation
       shell: powershell
       run: |
-        .\Generate-USB-Bundle-Clean.ps1 -OutputPath .\test-bundle -SkipSigning
+        .\src\scripts\Generate-USB-Bundle-Clean.ps1 -OutputPath .\test-bundle -SkipSigning
         
-        if (Test-Path ".\test-bundle\NovaFuse-EGP-VS-v0.1.0") {
+        if (Test-Path ".\test-bundle\NovaFuse-EGP-VS-v0.1.2") {
           Write-Host "✅ Bundle generation successful"
         } else {
           Write-Host "❌ Bundle generation failed"
@@ -149,7 +149,7 @@ jobs:
       with:
         name: ubuntu-verification-artifacts
         path: |
-          verifier/artifacts/
+          src/artifacts/
           test-bundle/
         retention-days: 30
 
@@ -172,14 +172,14 @@ jobs:
     - name: Run Verification Harness
       shell: powershell
       run: |
-        cd verifier
-        .\verify.ps1
+        cd src\scripts
+        .\VALIDATE-SYSTEM.ps1
         
     - name: Validate Certificate
       shell: powershell
       run: |
-        if (Test-Path "verifier\artifacts\certs\certificate-*.json") {
-          $cert = Get-Content "verifier\artifacts\certs\certificate-*.json" | ConvertFrom-Json
+        if (Test-Path "src\artifacts\certs\certificate-*.json") {
+          $cert = Get-Content "src\artifacts\certs\certificate-*.json" | ConvertFrom-Json
           Write-Host "Certificate Status: $($cert.results.overall)"
           Write-Host "Certificate ID: $($cert.metadata.certificate_id)"
           
@@ -202,9 +202,9 @@ jobs:
     - name: Test Bundle Generation
       shell: powershell
       run: |
-        .\Generate-USB-Bundle-Clean.ps1 -OutputPath .\test-bundle -SkipSigning
+        .\src\scripts\Generate-USB-Bundle-Clean.ps1 -OutputPath .\test-bundle -SkipSigning
         
-        if (Test-Path ".\test-bundle\NovaFuse-EGP-VS-v0.1.0") {
+        if (Test-Path ".\test-bundle\NovaFuse-EGP-VS-v0.1.2") {
           Write-Host "✅ Bundle generation successful"
         } else {
           Write-Host "❌ Bundle generation failed"
@@ -217,7 +217,7 @@ jobs:
       with:
         name: macos-verification-artifacts
         path: |
-          verifier/artifacts/
+          src/artifacts/
           test-bundle/
         retention-days: 30
 
