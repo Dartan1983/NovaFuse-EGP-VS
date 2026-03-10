@@ -122,7 +122,7 @@ Configured via `src/config/profile.json`:
 docker-compose up novafuse-egp-vs-native
 
 # Direct Docker run
-docker run --rm -v $(pwd)/artifacts:/harness/verifier/artifacts novafuse/egp-vs:0.1.2 ./verify.ps1
+docker run --rm -v $(pwd)/artifacts:/harness/src/artifacts novafuse/egp-vs:0.1.2 ./VALIDATE-SYSTEM.ps1
 ```
 
 ## Certificate Output
@@ -227,6 +227,20 @@ Certification issuance and mark usage reserved.
 * **Security Issues:** [novafuse.technologies@gmail.com](mailto:novafuse.technologies@gmail.com)
 * **Compliance Questions:** [novafuse.technologies@gmail.com](mailto:novafuse.technologies@gmail.com)
 * **Technical Support:** [novafuse.technologies@gmail.com](mailto:novafuse.technologies@gmail.com)
+
+---
+
+## About
+
+Deterministic verification system for evaluating conformance to the NovaFuse Evidence Governance Protocol (EGP), designed for auditors, regulators, and high‑assurance environments.
+
+## Resources
+
+- **Readme** - Current documentation
+- **License** - View license
+- **Contributing** - Contributing
+- **Security policy** - Security policy
+- **Activity** - Project activity
 
 ---
 
