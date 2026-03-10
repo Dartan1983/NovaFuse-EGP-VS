@@ -1,5 +1,5 @@
 ## NovaFuse-EGP-VS v0.1.2
----
+
 **NovaFuse Evidence Governance Protocol (EGP) Verification Harness** — Deterministic, CI-runnable evaluation harness for assessing conformance to NovaFuse-EGP-0.1, designed for auditors, regulators, and high-assurance environments.
 
 ## Overview
