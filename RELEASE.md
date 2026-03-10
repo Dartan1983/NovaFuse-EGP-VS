@@ -1,10 +1,23 @@
-# NovaFuse-EGP-VS v0.1.0 Release Notes
+# NovaFuse-EGP-VS v0.1.2 Release Notes
 
 > **Version Note:** This release note documents the initial v0.1.0 capability set. Later patch releases (e.g., v0.1.2) contain non-breaking refinements and documentation clarifications while preserving the same verification semantics.
 
 ## 🎯 Executive Summary
 
-NovaFuse-EGP-VS v0.1.0 delivers a deterministic, auditable verification system for assessing conformance to the NovaFuse Evidence Governance Protocol (EGP). This release emphasizes reproducibility, cryptographic integrity, and clear scope boundaries suitable for independent assessment and regulatory review.
+NovaFuse-EGP-VS v0.1.2 delivers a deterministic, auditable verification system for assessing conformance to the NovaFuse Evidence Governance Protocol (EGP). This release emphasizes reproducibility, cryptographic integrity, and clear scope boundaries suitable for independent assessment and regulatory review.
+
+## ✅ Verification Status
+
+| **Test Suite** | **Status** | **Description** |
+|----------------|------------|-----------------|
+| **EG01 Determinism** | ✅ PASS | Identical inputs produce identical outcomes |
+| **EG02 Explicit Refusal** | ✅ PASS | Invalid proposals are explicitly refused |
+| **EG03 Authority Separation** | ✅ PASS | No proposal-generation capabilities |
+| **EG04 Identity Binding** | ✅ PASS | Identity-bound evaluation outcomes |
+| **EG05 Evidence Generation** | ✅ PASS | Non-repudiable evidence artifacts |
+| **EG06 Fail-Closed** | ✅ PASS | Safe refusal under failure conditions |
+
+**This system already passed its own verification matrix.**
 
 ## 🚀 Key Features
 
