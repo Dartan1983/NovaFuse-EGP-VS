@@ -18,13 +18,13 @@
 
 ```powershell
 # Run full verification suite
-.\verifier\verify.ps1
+.\src\scripts\VALIDATE-SYSTEM.ps1
 
 # Run with verbose output
-.\verifier\verify.ps1 -Verbose
+.\src\scripts\VALIDATE-SYSTEM.ps1 -Verbose
 
 # Clean artifacts and rerun
-.\verifier\verify.ps1 -Clean
+.\src\scripts\VALIDATE-SYSTEM.ps1 -Clean
 ```
 
 ---
@@ -33,14 +33,14 @@
 
 ```text
                   ┌───────────────────┐
-                  │   verify.ps1      │
+                  │ VALIDATE-SYSTEM.ps1 │
                   │  (Verifier Entry) │
                   └────────┬─────────┘
                            │
            ┌───────────────┴────────────────┐
            │                                │
   ┌────────▼─────────┐             ┌────────▼─────────┐
-  │    tests/        │             │  config/         │
+  │    src/tests/    │             │  config/         │
   │ EG01..EG06 suites│             │ profile.json     │
   └────────┬─────────┘             └────────┬─────────┘
            │                                │
@@ -57,12 +57,12 @@
                   │ Verification     │
                   │ Certificate      │
                   │ (Cryptographically Signed) │
-                  └──────────────────┘
+                  └───────────────────┘
 ```
 
 **Diagram Notes:**
 
-* **verify.ps1** pulls configuration and executes all EG01–EG06 test suites.
+* **VALIDATE-SYSTEM.ps1** pulls configuration and executes all EG01–EG06 test suites.
 * **artifacts/** stores logs, certificates, and SBOMs for full auditability.
 * **Certificate output** includes cryptographic signatures to verify authenticity.
 
@@ -79,7 +79,7 @@
 
 ## Configuration
 
-Configured via `verifier/config/profile.json`:
+Configured via `src/config/profile.json`:
 
 ```json
 {
@@ -155,7 +155,7 @@ Successful verification produces a cryptographically signed certificate:
 - name: Run NovaFuse EGP Verification
   run: |
     cd NovaFuse-EGP-VS
-    ./verifier/verify.ps1 -Verbose
+    ./src/scripts/VALIDATE-SYSTEM.ps1 -Verbose
 ```
 
 **Azure Pipelines:**
@@ -163,7 +163,7 @@ Successful verification produces a cryptographically signed certificate:
 ```yaml
 - task: PowerShell@2
   inputs:
-    filePath: 'NovaFuse-EGP-VS/verifier/verify.ps1'
+    filePath: 'NovaFuse-EGP-VS/src/scripts/VALIDATE-SYSTEM.ps1'
     arguments: '-Verbose'
 ```
 
