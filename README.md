@@ -1,14 +1,16 @@
-<<<<<<< HEAD
+
 # NovaFuse-EGP-VS v0.1.2
 
-![Build Status](https://github.com/Dartan1983/NovaFuse-EGP-VS/workflows/validation.yml/badge.svg)
-![License](https://img.shields.io/badge/license-Proprietary-blue)
-![Stars](https://img.shields.io/github/stars/Dartan1983/NovaFuse-EGP-VS?style=social)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
-![Version](https://img.shields.io/badge/version-v0.1.2-orange)
-=======
+[![Build Status](https://github.com/Dartan1983/NovaFuse-EGP-VS/workflows/validation.yml/badge.svg)](https://github.com/Dartan1983/NovaFuse-EGP-VS/actions)
+[![Validation](https://img.shields.io/badge/validation-6%2F6%20PASS-brightgreen)](https://github.com/Dartan1983/NovaFuse-EGP-VS)
+[![Status](https://img.shields.io/badge/status-pre--release-orange)](https://github.com/Dartan1983/NovaFuse-EGP-VS/releases)
+[![Purpose](https://img.shields.io/badge/purpose-auditor%20evaluation-blue)](https://github.com/Dartan1983/NovaFuse-EGP-VS)
+[![Use](https://img.shields.io/badge/use-non--production-lightgrey)](https://github.com/Dartan1983/NovaFuse-EGP-VS)
+[![Version](https://img.shields.io/badge/version-v0.1.2-orange)](https://github.com/Dartan1983/NovaFuse-EGP-VS/releases/tag/v0.1.2)
+[![License](https://img.shields.io/badge/license-Proprietary-blue)](https://github.com/Dartan1983/NovaFuse-EGP-VS/blob/main/LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)](https://github.com/Dartan1983/NovaFuse-EGP-VS)
 ## NovaFuse-EGP-VS v0.1.2
->>>>>>> 932ce6cd7ef38a726f6d6f8ba01d171c18591521
+
 
 **NovaFuse Evidence Governance Protocol (EGP) Verification Harness** — Deterministic, CI-runnable evaluation harness for assessing conformance to NovaFuse-EGP-0.1, designed for auditors, regulators, and high-assurance environments.
 
