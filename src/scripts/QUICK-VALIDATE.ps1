@@ -5,7 +5,7 @@ Write-Host "NovaFuse-EGP-VS Quick Validation" -ForegroundColor Cyan
 Write-Host "==============================" -ForegroundColor Cyan
 
 # Check Bundle
-$bundlePath = ".\test-bundle\NovaFuse-EGP-VS-v0.1.0"
+$bundlePath = if ($IsWindows) { ".\test-bundle\NovaFuse-EGP-VS-v0.1.0" } else { "./test-bundle/NovaFuse-EGP-VS-v0.1.0" }
 if (Test-Path $bundlePath) {
     Write-Host "✅ Bundle found: $bundlePath" -ForegroundColor Green
 } else {
@@ -14,7 +14,7 @@ if (Test-Path $bundlePath) {
 }
 
 # Check Verification Harness
-$verifierPath = "$bundlePath\verifier\verify.ps1"
+$verifierPath = Join-Path $bundlePath "verifier/verify.ps1"
 if (Test-Path $verifierPath) {
     Write-Host "✅ Verification harness found" -ForegroundColor Green
 } else {
@@ -24,7 +24,7 @@ if (Test-Path $verifierPath) {
 
 # Run Verification
 Write-Host "Running verification harness..." -ForegroundColor Yellow
-Push-Location "$bundlePath\verifier"
+Push-Location (Join-Path $bundlePath "verifier")
 try {
     $output = & .\verify.ps1
     $exitCode = $LASTEXITCODE
@@ -34,7 +34,7 @@ try {
         Write-Host "✅ Verification harness PASSED" -ForegroundColor Green
         
         # Check Certificate
-        $certPath = "$bundlePath\verifier\artifacts\certs\certificate-egp-0.1-novadust-v0.1.0.json"
+        $certPath = Join-Path $bundlePath "verifier/artifacts/certs/certificate-egp-0.1-novadust-v0.1.0.json"
         if (Test-Path $certPath) {
             Write-Host "✅ Certificate generated" -ForegroundColor Green
             

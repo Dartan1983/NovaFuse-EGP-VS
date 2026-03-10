@@ -36,6 +36,15 @@ jobs:
       if: runner.os == 'Windows'
       run: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
 
+    - name: Generate test bundle
+      run: |
+        if (Test-Path 'src/scripts/Generate-USB-Bundle-Clean.ps1') {
+          & 'src/scripts/Generate-USB-Bundle-Clean.ps1' -OutputPath './test-bundle' -SkipSigning
+        } else {
+          Write-Error 'Bundle generation script not found'
+          exit 1
+        }
+
     - name: Locate validation script
       id: find_script
       run: |
