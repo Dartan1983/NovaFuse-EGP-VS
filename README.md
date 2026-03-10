@@ -207,6 +207,19 @@ Proprietary certification infrastructure license (NCIL v0.1).
 Source-available for audit and reproducibility.
 Certification issuance and mark usage reserved.
 
+## Team
+
+**NovaFuse-EGP-VS** represents a significant advancement in verification technology and institutional compliance. This project embodies the convergence of:
+
+- **Cryptographic verification** with deterministic outcomes
+- **Evidence governance** with audit-worthy documentation  
+- **Professional architecture** with enterprise-grade security
+- **Regulatory alignment** with framework mapping capabilities
+
+**Built with institutional precision and designed for maximum credibility.**
+
+---
+
 ---
 
 ## Support
