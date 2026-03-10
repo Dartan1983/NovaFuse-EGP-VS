@@ -1,7 +1,8 @@
 
 # NovaFuse-EGP-VS v0.1.2
 
-[![Build Status](https://github.com/Dartan1983/NovaFuse-EGP-VS/actions/workflows/validation.yml/badge.svg)](https://github.com/Dartan1983/NovaFuse-EGP-VS/actions)
+[![Build Status](https://github.com/Dartan1983/NovaFuse-EGP-VS/actions/workflows/validation.yml/badge.svg)](https://github.com/Dartan1983/NovaFuse-EGP-VS/actions/workflows/validation.yml)
+[![Multi-Platform Status](https://github.com/Dartan1983/NovaFuse-EGP-VS/actions/workflows/validation-multiplatform.yml/badge.svg)](https://github.com/Dartan1983/NovaFuse-EGP-VS/actions/workflows/validation-multiplatform.yml)
 [![Validation](https://img.shields.io/badge/validation-6%2F6%20PASS-brightgreen)](https://github.com/Dartan1983/NovaFuse-EGP-VS)
 [![Status](https://img.shields.io/badge/status-pre--release-orange)](https://github.com/Dartan1983/NovaFuse-EGP-VS/releases)
 [![Purpose](https://img.shields.io/badge/purpose-auditor%20evaluation-blue)](https://github.com/Dartan1983/NovaFuse-EGP-VS)

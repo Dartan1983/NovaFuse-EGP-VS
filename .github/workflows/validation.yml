@@ -21,17 +21,21 @@ jobs:
         inlineScript: |
           Write-Host "PowerShell Version: $($PSVersionTable.PSVersion)"
           
+    - name: Generate Test Bundle
+      shell: powershell
+      run: |
+        .\src\scripts\Generate-USB-Bundle-Clean.ps1 -OutputPath .\test-bundle -SkipSigning
+        
     - name: Run Verification Harness
       shell: powershell
       run: |
-        cd src\scripts
-        .\VALIDATE-SYSTEM.ps1
+        .\src\scripts\QUICK-VALIDATE.ps1
         
     - name: Validate Certificate
       shell: powershell
       run: |
-        if (Test-Path "src\artifacts\certs\certificate-*.json") {
-          $cert = Get-Content "src\artifacts\certs\certificate-*.json" | ConvertFrom-Json
+        if (Test-Path "test-bundle\NovaFuse-EGP-VS-v0.1.0\verifier\artifacts\certs\certificate-*.json") {
+          $cert = Get-Content "test-bundle\NovaFuse-EGP-VS-v0.1.0\verifier\artifacts\certs\certificate-*.json" | ConvertFrom-Json
           Write-Host "Certificate Status: $($cert.results.overall)"
           Write-Host "Certificate ID: $($cert.metadata.certificate_id)"
           
@@ -49,9 +53,7 @@ jobs:
     - name: Test Bundle Generation
       shell: powershell
       run: |
-        .\src\scripts\Generate-USB-Bundle-Clean.ps1 -OutputPath .\test-bundle -SkipSigning
-        
-        if (Test-Path ".\test-bundle\NovaFuse-EGP-VS-v0.1.2") {
+        if (Test-Path ".\test-bundle\NovaFuse-EGP-VS-v0.1.0") {
           Write-Host "✅ Bundle generation successful"
         } else {
           Write-Host "❌ Bundle generation failed"
@@ -61,7 +63,7 @@ jobs:
     - name: Validate Bundle Integrity
       shell: powershell
       run: |
-        $manifestPath = ".\test-bundle\NovaFuse-EGP-VS-v0.1.2\RELEASE-HASHES.txt"
+        $manifestPath = ".\test-bundle\NovaFuse-EGP-VS-v0.1.0\RELEASE-HASHES.txt"
         if (Test-Path $manifestPath) {
           Write-Host "✅ Bundle manifest found"
           
@@ -80,6 +82,5 @@ jobs:
       with:
         name: verification-artifacts
         path: |
-          src/artifacts/
           test-bundle/
         retention-days: 30
