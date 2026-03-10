@@ -1,0 +1,40 @@
+{
+  "profile": {
+    "name": "NovaFuse-EGP-0.1",
+    "version": "0.1.2",
+    "componentName": "novadust",
+    "egpVersion": "0.1"
+  },
+  "verification": {
+    "determinismRuns": 100,
+    "timeoutSeconds": 300,
+    "strictMode": true
+  },
+  "testMatrix": {
+    "EG01_Determinism": {
+      "runs": 100,
+      "randomizedOrder": true,
+      "expectedHashUniqueness": 1
+    },
+    "EG02_ExplicitRefusal": {
+      "runs": 10,
+      "invalidProposals": ["malformed", "unauthorized", "corrupted"]
+    },
+    "EG03_AuthoritySeparation": {
+      "runs": 50,
+      "forbiddenCapabilities": ["proposal-generation", "identity-impersonation"]
+    },
+    "EG04_IdentityBoundEvaluation": {
+      "runs": 25,
+      "testIdentities": ["auditor", "regulator", "user"]
+    },
+    "EG05_NonRepudiableEvidence": {
+      "runs": 30,
+      "evidenceTypes": ["logs", "certificates", "signatures", "timestamps"]
+    },
+    "EG06_FailClosedSemantics": {
+      "runs": 20,
+      "failureConditions": ["timeout", "resource-exhaustion", "security-violation"]
+    }
+  }
+}
