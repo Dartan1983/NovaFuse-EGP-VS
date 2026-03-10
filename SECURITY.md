@@ -111,8 +111,7 @@ python check-revocation.py NovaFuse-PublicKey.asc revocation-manifest.json
 
 ### **Communication Channels**
 - **GitHub Repository**: Security advisories
-- **Email**: security@novafuse.ai
-- **Website**: novafuse.ai/security
+- **Email**: novafuse.technologies@gmail.com
 - **Public Keyservers**: Key revocation notices
 
 ---
@@ -203,13 +202,13 @@ python check-revocation.py NovaFuse-PublicKey.asc revocation-manifest.json
 ## 🚨 Reporting Security Issues
 
 ### **Vulnerability Reporting**
-- **Email**: security@novafuse.ai
+- **Email**: novafuse.technologies@gmail.com
 - **PGP Key**: Available on request
 - **Response Time**: Within 48 hours
 - **Coordination**: Coordinated disclosure available
 
 ### **Security Questions**
-- **Email**: security@novafuse.ai
+- **Email**: novafuse.technologies@gmail.com
 - **Documentation**: This SECURITY.md file
 - **Procedures**: KEY-REVOCATION.md
 - **Support**: GitHub Discussions
@@ -240,15 +239,17 @@ python check-revocation.py NovaFuse-PublicKey.asc revocation-manifest.json
 ## 📞 Security Contacts
 
 ### **Security Team**
-- **Chief Security Officer**: cso@novafuse.ai
-- **Security Engineering**: security@novafuse.ai
-- **Incident Response**: incident@novafuse.ai
+- **Chief Security Officer**
+- **Security Engineering**
+- **Incident Response**
+ Email: novafuse.technologies@gmail.com
 
 ### **Reporting Channels**
-- **Vulnerabilities**: security@novafuse.ai
-- **Security Questions**: security@novafuse.ai
-- **Incidents**: incident@novafuse.ai
-- **General**: security@novafuse.ai
+- **Vulnerabilities**
+- **Security Questions**
+- **Incidents**
+- **General**
+ Email: novafuse.technologies@gmail.com
 
 ---
 
