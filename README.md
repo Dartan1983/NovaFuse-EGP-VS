@@ -1,6 +1,6 @@
 # NovaFuse-EGP-VS v0.1.2
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Build Status](https://github.com/Dartan1983/NovaFuse-EGP-VS/workflows/CI/badge.svg)
 ![License](https://img.shields.io/badge/license-Proprietary-blue)
 ![Validation](https://img.shields.io/badge/validation-6%2F6%20PASS-brightgreen)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
