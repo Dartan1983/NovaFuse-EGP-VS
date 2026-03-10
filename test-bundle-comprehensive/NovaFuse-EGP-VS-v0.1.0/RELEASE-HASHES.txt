@@ -1,0 +1,16 @@
+﻿# NovaFuse-EGP-VS v0.1.0 - SHA-256 Integrity Manifest
+# Generated: 2026-03-10
+# Profile: NovaFuse-EGP-0.1
+# Harness: NovaFuse-EGP-VS v0.1.0
+
+8C70EB7CB144E9566C224E49DC84D423126278A24A576020A74B4A941290023C  D:/NovaFuse-Backup/NovaFuse-EGP-VS/test-bundle-comprehensive/NovaFuse-EGP-VS-v0.1.0/BUNDLE-METADATA.json
+274B609469139A1AB3ECCB6BE2627904052C926216EDA6E0A84547BC0A5E60C5  D:/NovaFuse-Backup/NovaFuse-EGP-VS/test-bundle-comprehensive/NovaFuse-EGP-VS-v0.1.0/README.md
+B416CC70B7F29EF758C23673AE23CF9B02CC980E00E707F818A21446A4A2B02A  D:/NovaFuse-Backup/NovaFuse-EGP-VS/test-bundle-comprehensive/NovaFuse-EGP-VS-v0.1.0/cert-schema/egp-certificate.schema.json
+C900E5C7FA1951DA13AAE6204AE43CD480B8F7EC0E1B7F6781DEB0A0B9997755  D:/NovaFuse-Backup/NovaFuse-EGP-VS/test-bundle-comprehensive/NovaFuse-EGP-VS-v0.1.0/tests/EG01_determinism/test.ps1
+4AE554C7485484245CB5B6F27984D5AF77FDD25EB96AB1F03A984A6B34931C8D  D:/NovaFuse-Backup/NovaFuse-EGP-VS/test-bundle-comprehensive/NovaFuse-EGP-VS-v0.1.0/tests/EG02_refusal/test.ps1
+D1B716AF69FB38DD1EAA17EA732437774A3EC681959E71B5BD168337F5140DD6  D:/NovaFuse-Backup/NovaFuse-EGP-VS/test-bundle-comprehensive/NovaFuse-EGP-VS-v0.1.0/tests/EG03_authority_separation/test.ps1
+20FC6E3B1FD2309ECEB3CAB9C739A334F8B89F5064B1AAB3CD73127A4B04C7D5  D:/NovaFuse-Backup/NovaFuse-EGP-VS/test-bundle-comprehensive/NovaFuse-EGP-VS-v0.1.0/tests/EG04_identity_binding/test.ps1
+C152D5A32A881401778814F60701548BB20204ECA6CE3D1D6DECB2245FD64ABA  D:/NovaFuse-Backup/NovaFuse-EGP-VS/test-bundle-comprehensive/NovaFuse-EGP-VS-v0.1.0/tests/EG05_evidence/test.ps1
+F85E8B039BB02BEC0775D15ED29A1A9096306398D80F1DBDF45C0CDB64288A58  D:/NovaFuse-Backup/NovaFuse-EGP-VS/test-bundle-comprehensive/NovaFuse-EGP-VS-v0.1.0/tests/EG06_fail_closed/test.ps1
+0B62943F0A8F53B1E203F2B37EC7FB16826B3E3CB55B3BE07D43564F29112D8F  D:/NovaFuse-Backup/NovaFuse-EGP-VS/test-bundle-comprehensive/NovaFuse-EGP-VS-v0.1.0/verifier/verify.ps1
+1C4926E9716EE6728EA55479D749912EF10535BBD7B43A335C652A499A9D2089  D:/NovaFuse-Backup/NovaFuse-EGP-VS/test-bundle-comprehensive/NovaFuse-EGP-VS-v0.1.0/verifier/config/profile.json

@@ -1,0 +1,43 @@
+﻿{
+    "bundle_metadata":  {
+                            "integrity":  {
+                                              "bundle_size_bytes":  73775,
+                                              "file_count":  10,
+                                              "compression_method":  "ZIP",
+                                              "directory_count":  10,
+                                              "bundle_sha256":  "873CE5DA61C8C05EB36F22FBE9939ED58E204E1BCC49D54A3F976FD2D22E8B12"
+                                          },
+                            "bundle_version":  "v0.1.2",
+                            "security":  {
+                                             "signature_algorithm":  "RSA-4096",
+                                             "signature_format":  "PGP",
+                                             "signing_key_email":  "certification@novafuse.ai",
+                                             "hash_algorithm":  "SHA-256",
+                                             "signing_key_id":  "ABCD1234EF567890"
+                                         },
+                            "build_information":  {
+                                                      "build_architecture":  "AMD64",
+                                                      "build_environment":  "Production",
+                                                      "build_os":  "Microsoft Windows 10 Home",
+                                                      "build_host":  "DESKTOP-6U7GEFS",
+                                                      "build_timestamp":  "2026-03-10T04:16:16Z",
+                                                      "build_timezone":  "UTC"
+                                                  },
+                            "specification":  "NovaFuse-EGP-0.1",
+                            "format_version":  "1.0",
+                            "bundle_name":  "NovaFuse-EGP-VS",
+                            "profile_version":  "0.1.0",
+                            "tool_versions":  {
+                                                  "powershell":  {
+                                                                     "minimum_version":  "7.0.0",
+                                                                     "recommended_version":  "7.2.0",
+                                                                     "build_version":  "5.1.19041.6456"
+                                                                 },
+                                                  "gpg":  {
+                                                              "minimum_version":  "2.2.0",
+                                                              "recommended_version":  "2.4.0",
+                                                              "build_version":  "Not Available"
+                                                          }
+                                              }
+                        }
+}

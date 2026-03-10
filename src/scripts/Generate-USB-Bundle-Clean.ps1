@@ -66,7 +66,7 @@ $RequiredItems = @(
     "tests\EG04_identity_binding",
     "tests\EG05_evidence",
     "tests\EG06_fail_closed",
-    "cert-schema\egp-certificate.schema.json",
+    "schemas\cert-schema\egp-certificate.schema.json",
     "ASSESSOR-RUN.md",
     "CHANGE_CONTROL.md",
     "README.md",
